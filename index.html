@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <p>test</p>
+    <main class="card-container slideUp-animation">
+        <section class="left-hero">
+
+            <div class="logo">
+                <img src="images/Triforce.svg.png" alt="Triforce" class="triforce">
+                <h1 class="zelda">Journey Through Hyrule</h1>
+            </div>
+            <p class="quote">Photo by Halie West on UnSplash</p>
+        </section>
+
+        <section class="right-hero">
+            <article class="top-text left-padding">
+                <p>This is not a real online service! In the shadow of the haunting Majora's Mask, worn elegantly by our
+                    Zelda community member, we invite you to journey with us into the immersive world of Hyrule.</p>
+                <p>Join the ranks of Link, Zelda, and countless heroes by signing up to our community today! Create an
+                    account and enjoy the full experience of being part of this legendary adventure.</p>
+                <p class="remote-text">It's dangerous to go alone! Take this. - Old Man, The Legend of Zelda</p>
+            </article>
+
+            <form action="#">
+                <div class="form left-padding">
+                    <p class="form-title">Join us, and become a part of our legendary Zelda community. Adventure awaits!
+                    </p>
+
+                    <div class="input">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="input">
+                        <label for="phone-number">Phone number</label>
+                        <input type="tel" name="phone-number" id="phone-number" minlength="9" maxlength="9">
+                    </div>
+
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+
+                    <div class="input">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="confirm-password" id="confirm-password">
+                    </div>
+                    </div>  
+
+                    <div class="left-padding button">
+                        <button type="submit">Create Account</button>
+                    </div>
+               
+            </form>
+
+            <div class="log-in left-padding">
+                <p>Already have an account?</p>
+                <a href="#">Log in</a>
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>

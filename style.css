@@ -1,9 +1,173 @@
+:root {
+    --button-clr: #470047;
+    --input-border: #32CD32;
+    --txt: #000000;
+    --bg-clr: #f0ead6;
+    --box-shadow: #bcb7a7;
+}
+
+@font-face {
+    font-family: "odin";
+    src: url(fonts/Norse-Bold.otf) format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "triforce";
+    src: url(fonts/triforce-webfont.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--txt);
+
+    /* outline: 1px solid red; */
 }
 
-p {
-    color: red;
+
+.card-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.card-container,
+.logo {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* left - side */
+.left-hero {
+    background-image: url(images/backgroun-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40vw;
+}
+
+.logo {
+    height: auto;
+    background-color: rgba(0,0,0,0.7);
+    position: relative;
+    top: 60vh;
+    gap: 1vw;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+.triforce {
+    height: 10vh;
+}
+
+
+/* right - side */
+
+.right-hero {
+    width: 60vw;
+    background-color: var(--bg-clr);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.left-padding {
+    padding-left: 3vw;
+}
+
+.top-text {
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.remote-text {
+    margin: 40px 0 80px;
+}
+
+.form {
+    background-color: var(--bg-clr);
+    box-shadow: 0 10px 20px -2px var(--box-shadow);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+
+.form-title {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+input {
+    background-color: black;
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 3px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--input-border)
+}
+
+button {
+    background-color: var(--bg-clr);
+    color: var(--button-clr);
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid var(--button-clr);
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 0px;
+}
+
+button:hover {
+    background-color: var(--button-clr);
+    color: var(--input-border);
+}
+
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt);
+    font-weight: 700;
+}
+
+a:hover {
+    color: white
+}
+
+
+@media only screen and (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .
 }
