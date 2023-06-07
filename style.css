@@ -1,6 +1,6 @@
 :root {
     --button-clr: #470047;
-    --input-border: #32CD32;
+    --input-border: #E5E7EB;
     --txt: #000000;
     --bg-clr: #cfcab87c;
     --box-shadow: #bcb7a7;
@@ -20,47 +20,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
     font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--txt);
-
     /* outline: 1px solid red; */
 }
+
 body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: stretch;
+    font-size: 1.2rem;
+    /* overflow: hidden; */
 }
 
 .card-container {
     display: flex;
-    
 }
 
 .card-container,
 .logo {
     display: flex;
     flex-flow: row wrap;
+    width: 100%;
 }
 
 /* left - side */
 .left-hero {
     background-image: url(images/backgroun-img.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     flex: 2;
+    position: relative;
 }
 
 .logo {
     height: auto;
     background-color: rgba(0,0,0,0.7);
-    position: relative;
+    position: absolute;
+    width: 100%;
     top: 60vh;
     gap: 1vw;
     padding: 15px 0;
     justify-content: center;
     align-items: center;
+}
+
+.img-quote {
+    height: auto;
+    /* background-color: rgba(0,0,0,0.6); */
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.597);
+
 }
 
 h1 {
@@ -73,17 +90,11 @@ h1, .quote-text {
     letter-spacing: 0.25rem;
 }
 
-.text-top {
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.6;
-    width: 60ch;
-}
+
 
 .triforce {
     height: 10vh;
 }
-
 
 /* right - side */
 
@@ -97,6 +108,13 @@ h1, .quote-text {
 
 .left-padding {
     padding-left: 3vw;
+}
+
+.text-top {
+    font-weight: 500;
+    font-size: clamp(16px, 4vw, 28px);
+    line-height: 1.6;
+    /* width: 60ch; */
 }
 
 .top-text {
@@ -120,6 +138,7 @@ h1, .quote-text {
     padding-bottom: 20px;
 }
 
+
 .input {
     display: flex;
     flex-flow: column wrap;
@@ -137,19 +156,22 @@ h1, .quote-text {
 
 input {
     background-color: black;
-    border: 1px solid rgb(77, 77, 77);
+    border: 2px solid rgb(77, 77, 77);
     border-radius: 3px;
     padding: 8px 0;
+    outline:none;
 }
 
 input:focus {
     outline: none;
     border: 2px solid var(--input-border)
 }
+
 .button {
     /* height: 0px; */
     overflow: visible;
 }
+
 button {
     background-color: var(--bg-clr);
     color: var(--button-clr);
@@ -168,17 +190,6 @@ button:hover {
     color: var(--input-border);
 }
 
-button:focus, button:active {
-    border: 2px solid var(--input-border);
-    height: 50px;
-    margin: 40px 0px;
-    /* outline: none; */
-}
-
-button:focus {
-    outline: none;
-}
-
 button:active {
     border: 2px solid var(--button-clr);
 }
@@ -195,7 +206,7 @@ a {
 }
 
 a:hover {
-    color: white
+    color: var(--button-clr)
 }
 
 
@@ -226,8 +237,13 @@ a:hover {
     }
 
     .top-text {
-        width: auto;
+        width: 40ch;
         margin-top: 30px;
+        /* font-size: 0.9rem; */
+    }
+
+    .text-top {
+        /* font-size: 1rem; */
     }
     .left-padding {
         padding: 10px 20px;
