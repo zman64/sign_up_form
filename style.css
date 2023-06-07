@@ -1,12 +1,14 @@
 :root {
-    --button-clr: #470047;
-    --input-border: #E5E7EB;
-    --txt: #000000;
-    --bg-clr: #cfcab87c;
-    --box-shadow: #bcb7a7;
-    --triforce-font: 'triforce';
-    --form-box-clr: #f0ead6;
-    
+    --triforce-font: 'Triforce';
+    --button-clr: #5A3C57;
+    --txt: #FFFBCB;
+    --bg-clr: #1B1725;
+    --box-shadow: #AB9D91;
+    --form-box-clr: #3b314a;
+    --input-border-clr: #B6A754;
+    --input-selected-clr: #1B1725;
+    --input-error-clr: #AB0800;
+    --gold: #c6a645;
 }
 
 @font-face {
@@ -110,6 +112,14 @@ h1, .quote-text {
     padding-left: 3vw;
 }
 
+.sword {
+    font-family: var(--triforce-font);
+    font-size: clamp(2rem, 5vw, 7rem);
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .text-top {
     font-weight: 500;
     font-size: clamp(16px, 4vw, 28px);
@@ -136,6 +146,7 @@ h1, .quote-text {
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
 }
 
 
@@ -143,33 +154,41 @@ h1, .quote-text {
     display: flex;
     flex-flow: column wrap;
     width: 40%;
-    font-size: 0.7rem;
+    font-size: 1rem;
     text-transform: uppercase;
     opacity: 50%;
 }
 
 .form-title {
     width: 100%;
-    font-size: 1.2rem;
+    font-size: clamp(16px, 4vw, 20px);
     font-weight: 500;
 }
 
 input {
-    background-color: black;
-    border: 2px solid rgb(77, 77, 77);
+    background-color: var(--bg-color);
+    color: var(--gold);
+    border: 3px solid var(--input-border-clr);
     border-radius: 3px;
-    padding: 8px 0;
+    padding: 10px 0;
     outline:none;
+    font-family: var(--triforce-font);
+    letter-spacing: 1.8;
+    font-size: 1.6rem;
 }
 
 input:focus {
     outline: none;
-    border: 2px solid var(--input-border)
+    border: 3px solid var(--input-selected-clr);
+    box-shadow: 2px 2px 5px var(--box-shadow);
 }
 
-.button {
-    /* height: 0px; */
-    overflow: visible;
+input:valid {
+    border: 3px solid green;
+}
+
+.error {
+    border: 3px solid rgba(179, 5, 5, 0.798);
 }
 
 button {
@@ -211,6 +230,10 @@ a:hover {
 
 
 @media only screen and (max-width: 600px) {
+
+    .img-quote {
+        display: none;
+    }
     .card-container {
         flex-direction: column;
         height: auto;
@@ -237,14 +260,11 @@ a:hover {
     }
 
     .top-text {
-        width: 40ch;
+        /* width: 40ch; */
         margin-top: 30px;
         /* font-size: 0.9rem; */
     }
 
-    .text-top {
-        /* font-size: 1rem; */
-    }
     .left-padding {
         padding: 10px 20px;
     }
@@ -253,6 +273,7 @@ a:hover {
         padding: 20px 0;
         margin: 0;
     }
+
     .form {
         flex-flow: column nowrap;
         align-items: center;
