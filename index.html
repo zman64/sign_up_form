@@ -68,14 +68,14 @@
 
                     <div class="input">
                         <label for="password">Password</label>
-                        <input title="Please enter a valid password, must be at least 6 characters long" type="password"
-                            name="password" id="password" minlength="6" required>
+                        <input title="Please enter a valid password, must include at least 1 capitalized letter, at least 1 number, and being at least 8 characters" type="password"
+                            name="password" id="password" minlength="6" required pattern="^(?=.*[A-Z])(?=.*\d).{8,}$">
                         <span id="passwordError" style="display: none; color: red;">Passwords do not match!</span>
                     </div>
 
                     <div class="input">
                         <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password" minlength="6" required>
+                        <input type="password" name="confirm-password" id="confirm-password" minlength="6" pattern="^(?=.*\d)(?=.*[A-Z]).{8,}$" required>
                     </div>
                 </div>
 

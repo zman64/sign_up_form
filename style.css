@@ -124,6 +124,7 @@ h1, .quote-text {
     font-weight: 500;
     font-size: clamp(16px, 4vw, 28px);
     line-height: 1.6;
+    /* padding-top: 3em; */
     /* width: 60ch; */
 }
 
@@ -131,11 +132,12 @@ h1, .quote-text {
     font-weight: 500;
     width: 90%;
     font-size: 1.2rem;
+    /* padding-top: 5em; */
     /* background-color: var(--top-box-clr); */
 }
 
 .remote-text {
-    margin: 40px 0 80px;
+    margin: 25px 0 25px;
 }
 
 .form {
@@ -187,8 +189,12 @@ input:valid {
     border: 3px solid green;
 }
 
-.error {
+input:focus.error {
     border: 3px solid rgba(179, 5, 5, 0.798);
+}
+
+#passwordError {
+    font-weight: bold;
 }
 
 button {
@@ -286,8 +292,8 @@ a:hover {
         align-items: center;
     }
     input {
-        font-size: 0.9em;
-        height: 1.5rem;
+        font-size: 1.5rem;
+        height: 2.3rem;
         width: 70vw;
     }
     .button,
