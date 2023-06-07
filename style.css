@@ -239,20 +239,22 @@ a:hover {
 @media only screen and (max-width: 600px) {
 
     .zelda {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .img-quote {
         display: none;
     }
     .card-container {
-        flex-direction: column;
-        height: auto;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        /* height: auto; */
         text-align: center;
     }
     .left-hero {
         width: 100vw;
-        height: 15vh;
+        height: 25vh;
+        /* flex: 2; */
         display: flex;
         background-size: 100vw;
         background-position: 20% 20%;
@@ -268,13 +270,14 @@ a:hover {
 
     .right-hero {
         width: auto;
-        height: auto;
+        /* height: auto; */
         align-items: center;
+        /* flex: 2; */
     }
 
     .triforce {
         /* display: none; */
-        height: 40%;
+        height: 28%;
         width: auto;
     }
 
