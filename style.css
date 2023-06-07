@@ -2,15 +2,11 @@
     --button-clr: #470047;
     --input-border: #32CD32;
     --txt: #000000;
-    --bg-clr: #f0ead6;
+    --bg-clr: #cfcab87c;
     --box-shadow: #bcb7a7;
-}
-
-@font-face {
-    font-family: "odin";
-    src: url(fonts/Norse-Bold.otf) format("otf");
-    font-weight: normal;
-    font-style: normal;
+    --triforce-font: 'triforce';
+    --form-box-clr: #f0ead6;
+    
 }
 
 @font-face {
@@ -24,17 +20,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     font-family: 'EB Garamond', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--txt);
 
     /* outline: 1px solid red; */
 }
-
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
 
 .card-container {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    
 }
 
 .card-container,
@@ -48,7 +49,7 @@
     background-image: url(images/backgroun-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 40vw;
+    flex: 2;
 }
 
 .logo {
@@ -64,6 +65,19 @@
 
 h1 {
     color: white;
+    font-size: 1.8rem;
+}
+
+h1, .quote-text {
+    font-family: var(--triforce-font);
+    letter-spacing: 0.25rem;
+}
+
+.text-top {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    width: 60ch;
 }
 
 .triforce {
@@ -74,7 +88,7 @@ h1 {
 /* right - side */
 
 .right-hero {
-    width: 60vw;
+    flex: 4;
     background-color: var(--bg-clr);
     display: flex;
     flex-flow: column nowrap;
@@ -89,6 +103,7 @@ h1 {
     font-weight: 500;
     width: 90%;
     font-size: 1.2rem;
+    /* background-color: var(--top-box-clr); */
 }
 
 .remote-text {
@@ -96,7 +111,7 @@ h1 {
 }
 
 .form {
-    background-color: var(--bg-clr);
+    background-color: var(--form-box-clr);
     box-shadow: 0 10px 20px -2px var(--box-shadow);
     display: flex;
     flex-flow: row wrap;
@@ -124,13 +139,17 @@ input {
     background-color: black;
     border: 1px solid rgb(77, 77, 77);
     border-radius: 3px;
+    padding: 8px 0;
 }
 
 input:focus {
     outline: none;
     border: 2px solid var(--input-border)
 }
-
+.button {
+    /* height: 0px; */
+    overflow: visible;
+}
 button {
     background-color: var(--bg-clr);
     color: var(--button-clr);
@@ -140,11 +159,28 @@ button {
     border-radius: 5px;
     padding: 10px 40px;
     margin: 40px 0px;
+    height: 50px;
+
 }
 
 button:hover {
     background-color: var(--button-clr);
     color: var(--input-border);
+}
+
+button:focus, button:active {
+    border: 2px solid var(--input-border);
+    height: 50px;
+    margin: 40px 0px;
+    /* outline: none; */
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    border: 2px solid var(--button-clr);
 }
 
 .log-in {
@@ -169,5 +205,73 @@ a:hover {
         height: auto;
         text-align: center;
     }
-    .
+    .left-hero {
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        background-size: 100vw;
+        background-position: 20% 20%;
+    }
+
+    .logo {
+        width: 100vw;
+        height: 15vh;
+        position: static;
+        gap: 10px;
+    }
+
+    .right-hero {
+        width: auto;
+        height: auto;
+    }
+
+    .top-text {
+        width: auto;
+        margin-top: 30px;
+    }
+    .left-padding {
+        padding: 10px 20px;
+    }
+
+    .remote-text {
+        padding: 20px 0;
+        margin: 0;
+    }
+    .form {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .input {
+        text-align: left;
+        width: auto;
+        font-size: 0.9em;
+        justify-content: center;
+        align-items: center;
+    }
+    input {
+        font-size: 0.9em;
+        height: 1.5rem;
+        width: 70vw;
+    }
+    .button,
+    .log-in {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    button {
+        margin-bottom: 0;
+        width: 60vw;
+        padding: 10px 5px;
+    }
+
 }
+
+
+
+
+
+
+
+
+

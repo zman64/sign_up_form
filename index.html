@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <main class="card-container slideUp-animation">
+    <main class="card-container">
         <section class="left-hero">
 
             <div class="logo">
@@ -25,11 +25,18 @@
 
         <section class="right-hero">
             <article class="top-text left-padding">
-                <p>This is not a real online service! In the shadow of the haunting Majora's Mask, worn elegantly by our
+                <p class="text-top">This is not a real online service! In the shadow of the haunting Majora's Mask, worn elegantly by our
                     Zelda community member, we invite you to journey with us into the immersive world of Hyrule.</p>
-                <p>Join the ranks of Link, Zelda, and countless heroes by signing up to our community today! Create an
+                <p class="text-top">Join the ranks of Link, Zelda, and countless heroes by signing up to our community today! Create an
                     account and enjoy the full experience of being part of this legendary adventure.</p>
-                <p class="remote-text">It's dangerous to go alone! Take this. - Old Man, The Legend of Zelda</p>
+                <figure class="remote-text">
+                    <blockquote> 
+                        <p class="quote-text">
+                        It's dangerous to go alone! Take this.</p>
+                    </blockquote>    
+                        <figcaption>- Old Man, <cite>The Legend of Zelda</cite></figcaption>
+
+                    </figure>
             </article>
 
             <form action="#">
@@ -81,6 +88,13 @@
         </section>
 
     </main>
+    <script>
+    document.querySelectorAll('input, button').forEach(el => {
+  el.addEventListener('focus', e => e.preventDefault());
+});
+
+</script>
 </body>
+
 
 </html>
